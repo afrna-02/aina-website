@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Community Librarian</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f4ef; /* Soft cream */
+      color: #3a2e2a; /* Dark brown */
+    }
+
+    header {
+      background: linear-gradient(135deg, #d9cbbd, #cfc4b8); /* warm classic gradient */
+      padding: 3rem 1rem;
+      text-align: center;
+      color: #4a3f35;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      font-style: italic;
+    }
+
+    nav {
+      background-color: #c9bfae;
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #3a2e2a;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #7c6651;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #6b5e4a;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #b3a891;
+      padding-bottom: 0.3rem;
+      max-width: fit-content;
+    }
+
+    .program-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .program-card {
+      background: #fffdfa;
+      border-radius: 10px;
+      padding: 1rem;
+      box-shadow: 0 2px 6px rgba(100, 90, 70, 0.15);
+      border: 1px solid #dbd3c9;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .program-card:hover {
+      box-shadow: 0 4px 12px rgba(100, 90, 70, 0.3);
+    }
+
+    .program-card h3 {
+      margin-top: 0;
+      color: #7c6651;
+    }
+
+    form label {
+      font-weight: 600;
+      color: #5d4d3d;
+    }
+
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-top: 0.3rem;
+      margin-bottom: 1rem;
+      border: 1px solid #bfb4a9;
+      border-radius: 6px;
+      background-color: #fefcf8;
+      font-size: 1rem;
+      color: #4a3f35;
+      transition: border-color 0.3s ease;
+    }
+
+    form input:focus, form select:focus, form textarea:focus {
+      outline: none;
+      border-color: #7c6651;
+      background-color: #fffdfa;
+    }
+
+    form button {
+      background-color: #7c6651;
+      border: none;
+      padding: 0.8rem 2rem;
+      border-radius: 6px;
+      font-weight: bold;
+      color: #fefcf8;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form button:hover {
+      background-color: #5d4d3d;
+    }
+
+    footer {
+      background-color: #c9bfae;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #3a2e2a;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Community Librarian</h1>
+    <p>Knowledge for All – Community Education Programs</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#programs">Programs</a>
+    <a href="#register">Register</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="container">
+    <section id="about">
+      <h2>About Us</h2>
+      <p>We are a community librarian initiative empowering education and literacy within society. In partnership with libraries and volunteers, we run various free learning programs for all ages.</p>
+    </section>
+
+    <section id="programs">
+      <h2>Featured Programs</h2>
+      <div class="program-list">
+        <div class="program-card">
+          <h3>Digital Literacy</h3>
+          <p>Learn basic computer skills, email usage, and online safety.</p>
+        </div>
+        <div class="program-card">
+          <h3>Children's Reading</h3>
+          <p>Interactive storytelling sessions and reading encouragement for kids under 12.</p>
+        </div>
+        <div class="program-card">
+          <h3>Writing Workshop</h3>
+          <p>Creative writing techniques, essays, and journaling for teens and adults.</p>
+        </div>
+        <div class="program-card">
+          <h3>Community Tuition</h3>
+          <p>Volunteer-led tutoring classes for primary and secondary students.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="register">
+      <h2>Registration Form</h2>
+      <form id="registration-form">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <label for="program">Select Program</label>
+        <select id="program" name="program" required>
+          <option value="">-- Please Select --</option>
+          <option value="Digital Literacy">Digital Literacy</option>
+          <option value="Children's Reading">Children's Reading</option>
+          <option value="Writing Workshop">Writing Workshop</option>
+          <option value="Community Tuition">Community Tuition</option>
+        </select>
+
+        <label for="message">Additional Message</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Submit Registration</button>
+      </form>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: community@library.org</p>
+      <p>Phone: 012-3456789</p>
+      <p>Address: Community Library, Smart City</p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Community Librarian. Built for the community.
+  </footer>
+
+</body>
+</html>
